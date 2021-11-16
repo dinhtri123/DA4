@@ -1,0 +1,150 @@
+.main{
+    max-width:1440px;
+    padding:0px 20px;
+    margin:auto;
+    margin-top:50px;
+    @include display(center,flex-start);
+    &__left{
+        width:75%;
+        padding-right:50px;
+        border-right:1px solid #ddd;
+        h2{
+            color:#3a3a3a;
+            font-size: 30px;
+            font-weight: 400;
+        }
+        .product{
+            h3{
+                color:#0170b9;
+                font-size: 20px;
+                text-align:center;
+                margin-top:30px;
+                margin-bottom:30px;
+            }
+            .all{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-column-gap: 20px;
+                grid-row-gap: 50px;
+                .details{
+                    @include display(flex-start,center);
+                    flex-direction: column;
+                    position: relative;
+                    &::before{
+                        content:'Khuyến Mãi';
+                        position: absolute;
+                        top:-5px;
+                        right:5px;
+                        width:100px;
+                        height: 47px;
+                        border-radius:100%;
+                        color:white;
+                        @include display(center,center);
+                        font-size: 15px;
+                        background-color: #c72f2f;
+                    }
+                    img{
+                        width:100%;
+                        height:231px;
+                    }
+                    p{
+                        margin-top:10px;
+                        font-size: 15px;
+                        color:#0170b9;
+                        
+                    }
+                    span{
+                        width: 100%;
+                        margin-top:10px;
+                        font-weight: 600;
+                        display: block;
+                        text-align:left;
+                        color: #4b4f58;
+                        del{
+                            margin-right: 10px;
+                        }
+                    }
+                    & > button{
+                        background-color:#c72f2f;
+                        width:100%;
+                        height:40px;
+                        text-align:center;
+                        color:white;
+                        font-weight: 600;
+                        font-size: 15px;
+                        margin-top:10px;
+                        cursor: pointer;
+                        transition:0.2s linear;
+                    }
+                }
+                .pro2{
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+            .btn{
+                background-color: transparent;
+                color:#0170b9;
+                font-size: 20px;
+                display:block;
+                text-align: right;
+                width:100%;
+                padding: 50px 0px;
+            }
+            .cap{
+                color:#cf2e2e;
+            }
+            
+        }
+    }
+    &__right{
+        width:25%;
+        padding-left:50px;
+        h2{
+            color:#3a3a3a;
+            font-size: 25px;
+            font-weight: 400;
+        }
+        .input{
+            margin-top:20px;
+            width:100%;
+            height:50px;
+            position: relative;
+            input{
+                width:100%;
+                height:100%;
+                background:#eee;
+                padding:0px 20px;
+                outline:none;
+                border:none;
+            }
+            i{
+                position:absolute;
+                top:50%;
+                right:10px;
+                transform: translateY(-50%);
+            }
+
+        }
+        p{
+            margin-top:20px;
+            font-size: 30px;
+        }
+        .list{
+            @include display(flex-start,flex-start);
+            flex-direction: column;
+            a{
+                font-size: 20px;
+                color:#0170b9;
+                padding:10px 0px;
+                i{
+                    margin-left:20px;
+                    font-size: 16px;
+                    color:#3a3a3a;
+                }
+            }
+        }
+        
+    }
+}
